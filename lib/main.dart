@@ -9,9 +9,7 @@ import 'pages/register_page.dart';
 import 'pages/report_submission_page.dart';
 import 'services/firestore_service.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
   runApp(const MyApp());
 }
 
