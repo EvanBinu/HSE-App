@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hse_app/pages/home_page.dart';
 import '../constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -70,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                         );
 
                     if (userCredential.user != null) {
-                      // Navigator.pushNamed(context, ChatScreen.id);
+                      Navigator.pushNamed(context, HomePage.id);
                     }
                   } on FirebaseAuthException catch (e) {
                     String errorMessage;
