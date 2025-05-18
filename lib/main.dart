@@ -9,7 +9,16 @@ import 'pages/register_page.dart';
 import 'pages/report_submission_page.dart';
 import 'services/firestore_service.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyDRiAuzqZSimHmFz7AJ6zYWu2QOt-MhpyQ",
+      appId: "1:61784318:android:50f700685929fdb5bf65af",
+      messagingSenderId: "61784318",
+      projectId: "hse-app-f75b5",
+    ),
+  );
   runApp(const MyApp());
 }
 
